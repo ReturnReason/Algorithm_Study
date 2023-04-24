@@ -73,3 +73,8 @@ while (q.length) {
 }
 
 result > -1 ? console.log(result) : console.log('IMPOSSIBLE');
+
+/**
+ * memo.
+ * 큐에는 거리 순으로 들어간다.
+ */
