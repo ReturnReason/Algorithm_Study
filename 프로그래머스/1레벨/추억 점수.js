@@ -15,3 +15,25 @@ function solution(name, yearning, photo) {
 
   return ret;
 }
+
+//* 안 푼줄 알았는데.. (2023.05.24 2차 풀이) *//
+
+function solution(name, yearning, photo) {
+  const peoples = new Map();
+  name.forEach((n, i) => {
+    peoples.set(n, yearning[i]);
+  });
+
+  const result = [];
+  photo.forEach((p) => {
+    let score = 0;
+    p.forEach((name) => {
+      if (peoples.get(name)) {
+        score += peoples.get(name);
+      }
+    });
+    result.push(score);
+  });
+
+  return result;
+}
